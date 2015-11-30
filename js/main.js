@@ -40,7 +40,7 @@ myApp.controller('TwoController', function($scope) {
 });
 
 myApp.controller('ThreeController', function($scope) {
-
+	tour.start();
 });
 
 
