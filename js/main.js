@@ -21,6 +21,11 @@ myApp.config(function($stateProvider) {
 			url: '/three',
 			templateUrl: 'templates/three.html',
 			controller: 'ThreeController'
+		})
+		.state('four', {
+			url: '/four',
+			templateUrl: 'templates/four.html',
+			controller: 'FourController'
 		});
 
 });
@@ -67,6 +72,8 @@ myApp.controller('TwoController', function($scope) {
 myApp.controller('ThreeController', function($scope) {
 });
 
+myApp.controller('FourController', function($scope) {
+});
 
 
 

@@ -10,8 +10,8 @@ html {
   }
 
 .aboutImg {
-	height: 140px;
-	width: 140px;
+	height: 200px;
+	width: 200px;
 }
 
 .eachSec {
@@ -22,4 +22,9 @@ html {
 
 a:hover {
 	text-decoration: none;
+}
+
+.separate {
+	height: 200px;
+	width: 100%;
 }
