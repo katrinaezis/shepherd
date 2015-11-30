@@ -2,7 +2,6 @@
 
 #navLogo {
 	max-height: 40px;
-	padding-top: 10px;
 	margin-left: 5%;
 }
 
@@ -11,12 +10,13 @@ html {
   }
 
 .aboutImg {
-	height: 300px;
-	width: 300px;
-	border-radius: 50%;
-	margin: 4%;
+	height: 140px;
+	width: 140px;
 }
 
-.aboutOne {
-	overflow: auto;
+.eachSec {
+	margin: auto;
+	display: block;
+	text-align: center;
+
 }
