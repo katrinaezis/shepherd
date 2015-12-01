@@ -31,20 +31,19 @@ myApp.config(function($stateProvider) {
 });
 
 myApp.controller('IntroController', function($scope) {
-	// tour.start();
 	var tour;
 
 	tour = new Shepherd.Tour({	
 	  defaults: {
-	    classes: 'shepherd-theme-arrows',
+	    classes: 'shepherd-element shepherd-open shepherd-theme-arrows',
+	    showCancelLink: true,
 	    scrollTo: true
 	  }
 	});
 
 	tour.addStep('example-step', {
-		title: 'Hi there!',
-		text: 'This would help you get started with this application!',
-		attachTo: '#shepherd-intro top',
+		text: ["I'm a Shepherd tour guide! I can do more than just pop up on the page.  Click the next button!"],
+		attachTo: '.btn-large top',
 		classes: 'shepherd shepherd-open shepherd-theme-arrows shepherd-transparent-text',
 		buttons: [
 			{
@@ -60,6 +59,10 @@ myApp.controller('IntroController', function($scope) {
 			}
 		]
 	});
+
+	$scope.startTour = function() {
+		tour.start();
+	};
 });
 
 myApp.controller('OneController', function($scope) {

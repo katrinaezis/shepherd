@@ -29,6 +29,39 @@ a:hover {
 }
 
 .separate {
-	height: 200px;
+	height: 300px;
 	width: 100%;
+}
+.separate-thin {
+	height: 30px;
+	width:100%;
+}
+
+.shep-icon {
+	height: 5em;
+}
+
+.what-shep-title {
+	padding-top: 30px;
+}
+.what-shep {
+	text-align: center;
+}
+
+/* Double-color dashed line */
+hr.style-three {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+}
+
+.btn-large {
+	position: relative;
+	margin-top: 40px;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+
+.shepherd-text {
+	color: #01579b;
 }
