@@ -25,10 +25,14 @@ html {
 }
 
 a:hover, a:visited {
-	text-decoration: none;
+	text-decoration: none !important;
 }
 
-<<<<<<< HEAD
+#done {
+	border-radius: 10px;
+}
+
+
 #gotThat {
 	width: 100%;
 	padding: 3%;
@@ -54,7 +58,7 @@ a:hover, a:visited {
 	padding-top: 3%;
 }
 
-#includes, #init {
+#includes, #init, #example {
 	margin-bottom: 10%;
 }
 

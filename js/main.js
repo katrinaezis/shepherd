@@ -86,7 +86,11 @@ myApp.controller('IntroController', function($scope) {
 myApp.controller('OneController', function($scope) {
 	// $scope.$on('$includeContentLoaded', function() {
 		console.log("hello");
+		document.body.scrollTop = document.documentElement.scrollTop = 0;
 		Prism.highlightAll();
+	// });
+	// $rootScope.$on('$stateChangeSuccess', function() {
+	//    document.body.scrollTop = document.documentElement.scrollTop = 0;
 	// });
 });
 

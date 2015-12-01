@@ -4,10 +4,10 @@
 	all shepherd links included and a few divs.
 	Also put js, css and other needed files.
 	Katrina -->
-<div id="gettingStarted">
+<div id="gettingStarted" autoscroll="true">
 	<div id="go">
 		<h2>Alright! Let's get started.</h2>
-		<h5>First let's start by cloning this <a href="https://github.com/katrinaezis/shepherd_demo" target="_blank">repo</a></h5>
+		<h5>Go ahead and clone this <a href="https://github.com/katrinaezis/shepherd_demo" target="_blank">repo</a></h5>
 	</div>
 	<div id="gotThat" class="card-panel light-blue darken-2 white-text text-center"> 
 		<h4>Okay, you got that?</h4>
@@ -24,6 +24,7 @@
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/shepherd/1.3.0/js/shepherd.min.js"&gt;&lt;/script&gt;
 			</code></pre>
 		</div>
+		<hr>
 		<div id="init">
 			<h3>Initializing Shepherd</h3>
 			<h5>Start using Shepherd</h5>
@@ -39,6 +40,7 @@ tour = new Shepherd.tour({
 			</code></pre>
 			<h6 id="explain">Explanation: You create a new tour variable. Then you initialize a new Shepherd tour object and save it to that tour variable. The <code>defaults</code> that you specify will be used across all of your Shepherd steps, unless overwritten later. The class <code>'shepherd-theme-arrow'</code> is one of the default Shepherd themes we can apply.</h6>
 		</div>
+		<hr>
 		<div id="example">
 			<h3>Let's practice!</h3>
 			<h5>Start by initializing Shepherd in your main.js file</h5>
@@ -49,5 +51,12 @@ tour = new Shepherd.tour({
  		&#47&#47 Set it's defaults to include the class of 'shepherd-theme-arrows'
 			</code></pre>
 		</div>
+		<a ui-sref="two">
+		<div id="done" class="card-panel light-blue darken-2">
+			<h3 class="text-center white-text">Done?</h3>
+			<h5 class="text-center white-text">Good, let's move onto harder ish</h5>
+			<!-- <a ui-sref="two" class="btn-large waves-effect waves-light white light-blue-text darken-2-text">Lesson Two</a> -->
+		</div>
+	</a>
 	</div>
 </div>
