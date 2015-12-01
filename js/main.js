@@ -31,6 +31,8 @@ myApp.config(function($stateProvider) {
 });
 
 myApp.controller('IntroController', function($scope) {
+	$scope.canshow = 0;
+	console.log($scope.canshow)
 	var tour;
 
 	tour = new Shepherd.Tour({	
@@ -55,12 +57,28 @@ myApp.controller('IntroController', function($scope) {
 			}, {
 				text: 'Next',
 				action: tour.next,
-				classes: 'shepherd-button-example-primary'
+				classes: 'shepherd-button-example-primary',
 			}
 		]
 	});
+	tour.addStep('including', {
+	      title: 'You can add titles',
+	      text: 'Including Shepherd is easy! Just include shepherd.js, and a Shepherd theme file.',
+	      attachTo: '#thing bottom',
+	      buttons: [
+	        {
+	          text: 'Back',
+	          classes: 'shepherd-button-secondary',
+	          action: tour.back
+	        }, {
+	          text: 'Next',
+	          action: tour.next
+	        }
+	      ]
+	    });
 
 	$scope.startTour = function() {
+		$scope.canshow++;
 		tour.start();
 	};
 });
