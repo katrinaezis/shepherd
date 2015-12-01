@@ -21,6 +21,50 @@ html {
 
 }
 
-a:hover {
+a:hover, a:visited {
 	text-decoration: none;
+}
+
+#gotThat {
+	width: 100%;
+	padding: 3%;
+	padding-left: 5%;
+	margin-top: 0px;
+}
+
+#go {
+	padding: 5%;
+	background-image: url('../img/sheeps.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100vh;
+}
+
+.navbar-fixed {
+	height: 0;
+}
+
+#lesson {
+	padding: 5%;
+	padding-top: 3%;
+}
+
+#includes, #init {
+	margin-bottom: 10%;
+}
+
+#lesson h3 {
+	color: #0288d1;
+}
+
+pre {
+	margin-top: 2% !important;
+}
+
+#explain {
+	width: 80%;
+	text-align: center;
+	display: block;
+	margin: auto;
 }

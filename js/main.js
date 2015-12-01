@@ -32,7 +32,10 @@ myApp.controller('IntroController', function($scope) {
 });
 
 myApp.controller('OneController', function($scope) {
-
+	// $scope.$on('$includeContentLoaded', function() {
+		console.log("hello");
+		Prism.highlightAll();
+	// });
 });
 
 myApp.controller('TwoController', function($scope) {
