@@ -54,3 +54,8 @@ a:hover {
 	left:50%;
 	transform: translate(-50%, -50%);
 }
+
+/*angular animations
+https://code.angularjs.org/1.1.5/docs/api/ng.directive:ngShow#animations
+http://www.yearofmoo.com/2013/04/animation-in-angularjs.html#animating-ng-show-ng-hide*/
+
