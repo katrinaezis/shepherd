@@ -1,39 +1,60 @@
 <!-- Introduce us. Introduce shepherd. Why is shepherd useful.
 	Live demo of little tool tips.
-	Julian - Feel fucking lucky I've done so much of this part for you.
-	Biiiitch. -->
+	Julian -->
 <div id="header" class="container">
-	<h1>Sup guys</h1>
-	<h3>Today we're going to teach you some really cool stuff</h3>
-	<h5>Now you probably already have a couple questions.</h5>
-	<h5>Like, who are these people? What are they going to teach me? When can I go eat breakfast?</h5>
-	<h5>Let's answer those questions...</h5>
+	<h2>Today we're going to teach you about Shepherd</h2>
+	<h3>But first...</h3>
 </div>
+
 <div id="aboutUs" class="container marketing">
 	<div class="row">
-		<div class="col-xs-3 eachSec eachSec">
-			<img class="img-circle aboutImg" data-src="holder.js/140x140" alt="140x140" src="img/katrina.jpg">
+		<div class="col-md-3 eachSec">
+			<img class="img-circle aboutImg" src="img/katrina.jpg">
 			<h2>Katrina</h2>
-			<div>Hello I'm Katrina</div>
+			<div>Drinks tea</div>
 		</div>
-		<div class="col-xs-3 eachSec">
-			<img class="img-circle aboutImg" data-src="holder.js/140x140" alt="140x140" src="img/julian.jpg">
-			<h2>Katrina</h2>
-			<div>Hello I'm Katrina</div>
+		<div class="col-md-3 eachSec">
+			<img class="img-circle aboutImg" src="img/julian.jpg">
+			<h2>Julian</h2>
+			<div>Has some hair</div>
 		</div>
-		<div class="col-xs-3 eachSec">
-			<img class="img-circle aboutImg" data-src="holder.js/140x140" alt="140x140" src="img/simon.jpg">
-			<h2>Katrina</h2>
-			<div>Hello I'm Katrina</div>
+		<div class="col-md-3 eachSec">
+			<img class="img-circle aboutImg" src="img/simon.jpg">
+			<h2>Simon</h2>
+			<div>Was a drill sergeant in the Korean military</div>
 		</div>
-		<div class="col-xs-3 eachSec">
+		<div class="col-md-3 eachSec">
 			<img class="img-circle aboutImg" src="img/james.jpg">
-			<h2>Katrina</h2>
-			<div>Hello I'm Katrina</div>
+			<h2>James</h2>
+			<div>Is part of a longboard crew</div>
 		</div>
 	</div>
 </div>
-<div id="shepherdIntro" class="container">
-	<h3>Alright, now that we've gotten that stuff out of the way let's get to what we're teaching. Shepherd.</h3>
 
+<div class="container">
+	<h3>Alright, now that we've gotten that stuff out of the way, let's get to Shepherd.</h3>
+</div>
+
+<div class="separate light-blue lighten-1">
+	<h2 class="text-center what-shep-title">What is Shepherd?</h2>
+	<div class="col-md-4 what-shep">
+		<img class="shep-icon" src="img/javascript.png">
+		<h4>JavaScript Library</h4>
+	</div>
+	<div class="col-md-4 what-shep">
+		<img class="shep-icon" src="img/tether.png">
+		<h4>Uses Tether</h4>
+	</div>
+	<div class="col-md-4 what-shep">
+		<img class="shep-icon" src="img/guide.png">
+		<h4>Guides Users</h4>
+	</div>
+</div>
+
+<div class="container">
+	<h2 class="text-center">But what does it look like?</h2>
+	<a class="waves-light btn-large light-blue darken-2" ng-click="startTour()">Take a Look</a>
+</div>
+<div class="light-blue lighten-1 separate" ng-show="canshow > 0" ng-animate="{show: 'show-animation', hide: 'hide-animation'}">
+	<h1 id="thing">Look at all of these objects!!!</h1>
 </div>

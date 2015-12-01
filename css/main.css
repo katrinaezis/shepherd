@@ -7,24 +7,28 @@
 
 html {
     font-family: 'Raleway', sans-serif !important;
-  }
+}
+
+#aboutUs {
+	margin-top: 20px;
+}
 
 .aboutImg {
-	height: 140px;
-	width: 140px;
+	height: 200px;
+	width: 200px;
 }
 
 .eachSec {
 	margin: auto;
 	display: block;
 	text-align: center;
-
 }
 
 a:hover, a:visited {
 	text-decoration: none;
 }
 
+<<<<<<< HEAD
 #gotThat {
 	width: 100%;
 	padding: 3%;
@@ -68,3 +72,35 @@ pre {
 	display: block;
 	margin: auto;
 }
+
+.separate {
+	height: 400px;
+	width: 100%;
+}
+.separate-thin {
+	height: 30px;
+	width:100%;
+}
+
+.shep-icon {
+	height: 5em;
+}
+
+.what-shep-title {
+	padding-top: 90px;
+}
+.what-shep {
+	text-align: center;
+}
+
+.btn-large {
+	position: relative;
+	margin-top: 40px;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+
+/*angular animations
+https://code.angularjs.org/1.1.5/docs/api/ng.directive:ngShow#animations
+http://www.yearofmoo.com/2013/04/animation-in-angularjs.html#animating-ng-show-ng-hide*/
+

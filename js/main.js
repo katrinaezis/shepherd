@@ -1,5 +1,3 @@
-"use strict";
-
 var myApp = angular.module('myApp', ['ui.router']);
 
 myApp.config(function($stateProvider) {
@@ -23,12 +21,66 @@ myApp.config(function($stateProvider) {
 			url: '/three',
 			templateUrl: 'templates/three.html',
 			controller: 'ThreeController'
+		})
+		.state('four', {
+			url: '/four',
+			templateUrl: 'templates/four.html',
+			controller: 'FourController'
 		});
 
 });
 
 myApp.controller('IntroController', function($scope) {
+	$scope.canshow = 0;
+	console.log($scope.canshow)
+	var tour;
 
+	tour = new Shepherd.Tour({	
+	  defaults: {
+	    classes: 'shepherd-element shepherd-open shepherd-theme-arrows',
+	    showCancelLink: true,
+	    scrollTo: true
+	  }
+	});
+
+	tour.addStep('example-step', {
+		text: ["I'm a Shepherd tour guide! I can do more than just pop up on the page.  Click the next button!"],
+		attachTo: '.btn-large top',
+		classes: 'shepherd shepherd-open shepherd-theme-arrows shepherd-transparent-text',
+		buttons: [
+			{
+				text: 'Exit',
+				classes: 'shepherd-button-secondary',
+				action: function() {
+					return tour.hide();
+				}
+			}, {
+				text: 'Next',
+				action: tour.next,
+				classes: 'shepherd-button-example-primary',
+			}
+		]
+	});
+	tour.addStep('including', {
+	      title: 'You can add titles',
+	      text: 'Including Shepherd is easy! Just include shepherd.js, and a Shepherd theme file.',
+	      attachTo: '#thing bottom',
+	      buttons: [
+	        {
+	          text: 'Back',
+	          classes: 'shepherd-button-secondary',
+	          action: tour.back
+	        }, {
+	          text: 'Next',
+	          action: tour.next
+	        }
+	      ]
+	    });
+
+	$scope.startTour = function() {
+		$scope.canshow++;
+		tour.start();
+	};
 });
 
 myApp.controller('OneController', function($scope) {
@@ -39,44 +91,13 @@ myApp.controller('OneController', function($scope) {
 });
 
 myApp.controller('TwoController', function($scope) {
-	$scope.string = 'Hello';
 });
 
 myApp.controller('ThreeController', function($scope) {
-	tour.start();
+});
+
+myApp.controller('FourController', function($scope) {
 });
 
 
-var tour;
 
-tour = new Shepherd.Tour({	
-  defaults: {
-    classes: 'shepherd-theme-arrows',
-    scrollTo: true
-  }
-});
-
-console.log("sup");
-tour.addStep('example-step', {
-	title: 'Hi there!',
-	text: 'This would help you get started with this application!',
-	attachTo: '#hello bottom',
-	classes: 'shepherd shepherd-open shepherd-theme-arrows shepherd-transparent-text',
-	buttons: [
-		{
-			text: 'Exit',
-			classes: 'shepherd-button-secondary',
-			action: function() {
-				return tour.hide();
-			}
-		}, {
-			text: 'Next',
-			action: tour.next,
-			classes: 'shepherd-button-example-primary'
-		}
-	]
-});
-
-$(document).ready(function() {
-	tour.start();
-});
