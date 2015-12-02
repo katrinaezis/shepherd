@@ -37,6 +37,7 @@ myApp.controller('IntroController', function($scope) {
 	$scope.dropUrl = 'img/drop.png'
 	$scope.tooltipUrl = 'img/tooltip.png'
 	$scope.canshow = 0;
+	$scope.nextPage = 0;
 	var tour;
 
 	tour = new Shepherd.Tour({	
@@ -69,7 +70,7 @@ myApp.controller('IntroController', function($scope) {
 	      title: 'YOU CAN ADD TITLES!',
 	      text: 'Click back to go back a step, or next to go to the next step!',
 	      attachTo: '#attach-one right',
-	      scrollTo: true,	
+	      // scrollTo: true,	
 	      buttons: [
 	        {
 	          text: 'Back',
@@ -119,6 +120,10 @@ myApp.controller('IntroController', function($scope) {
 		$scope.canshow++;
 		tour.start();
 	};
+
+	$scope.countUp = function() {
+		$scope.nextPage++;
+	}
 
 	$scope.changeSelectGif = function() {
 		$scope.selectUrl = "./img/select.gif";
@@ -203,6 +208,7 @@ myApp.controller('ThreeController', function($scope) {
 });
 
 myApp.controller('FourController', function($scope) {
+	document.body.scrollTop = document.documentElement.scrollTop = 0;
 });
 
 
