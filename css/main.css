@@ -61,20 +61,10 @@ footer.page-footer {
 	padding-top: 90px;
 	text-align: center;
 }
-.what-shep {
-	text-align: center;
-}
 
-.btn-large {
+.btn-large, #tether-screenshot {
 	position: relative;
 	margin-top: 40px;
-	left:50%;
-	transform: translate(-50%, -50%);
-}
-
-#tether-screenshot {
-	position: relative;
-	margin-top: 90px;
 	left:50%;
 	transform: translate(-50%, -50%);
 }
@@ -83,7 +73,7 @@ footer.page-footer {
 	border: solid;
 	width: 100%;
 }
-.gif-text {
+.what-shep, .gif-text {
 	text-align: center;
 }
 
