@@ -31,6 +31,8 @@ myApp.config(function($stateProvider) {
 });
 
 myApp.controller('IntroController', function($scope) {
+	document.body.scrollTop = document.documentElement.scrollTop = 0;
+
 	$scope.selectUrl = 'img/select.png';
 	$scope.dropUrl = 'img/drop.png'
 	$scope.tooltipUrl = 'img/tooltip.png'
@@ -42,7 +44,7 @@ myApp.controller('IntroController', function($scope) {
 	  defaults: {
 	    classes: 'shepherd-element shepherd-open shepherd-theme-arrows',
 	    showCancelLink: true,
-	    scrollTo: true
+	    // scrollTo: true
 	  }
 	});
 
