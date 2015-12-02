@@ -31,6 +31,9 @@ myApp.config(function($stateProvider) {
 });
 
 myApp.controller('IntroController', function($scope) {
+	$scope.selectUrl = 'img/select.png';
+	$scope.dropUrl = 'img/drop.png'
+	$scope.tooltipUrl = 'img/tooltip.png'
 	$scope.canshow = 0;
 	console.log($scope.canshow)
 	var tour;
@@ -81,6 +84,28 @@ myApp.controller('IntroController', function($scope) {
 		$scope.canshow++;
 		tour.start();
 	};
+
+	$scope.changeSelectGif = function() {
+		$scope.selectUrl = "./img/select.gif";
+		console.log('hello')
+	}
+	$scope.changeDropGif = function() {
+		$scope.dropUrl = './img/drop.gif'
+	}
+	$scope.changeTooltipGif = function() {
+		$scope.tooltipUrl = './img/tooltip.gif'
+	}
+
+
+	$scope.changeSelectBack = function() {
+		$scope.selectUrl = 'img/select.png'
+	}
+	$scope.changeDropBack = function() {
+		$scope.dropUrl = 'img/drop.png'
+	}
+	$scope.changeTooltipBack = function() {
+		$scope.tooltipUrl = 'img/tooltip.png'
+	}
 });
 
 myApp.controller('OneController', function($scope) {

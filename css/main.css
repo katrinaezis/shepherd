@@ -69,6 +69,21 @@ a:hover, a:visited {
 	transform: translate(-50%, -50%);
 }
 
+#tether-screenshot {
+	position: relative;
+	margin-top: 90px;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+
+.gif-icon {
+	border: solid;
+	width: 100%;
+}
+.gif-text {
+	text-align: center;
+}
+
 /*angular animations
 https://code.angularjs.org/1.1.5/docs/api/ng.directive:ngShow#animations
 http://www.yearofmoo.com/2013/04/animation-in-angularjs.html#animating-ng-show-ng-hide*/
