@@ -159,6 +159,8 @@ myApp.controller('OneController', function($scope) {
 });
 
 myApp.controller('TwoController', function($scope) {
+	document.body.scrollTop = document.documentElement.scrollTop = 0;
+
 	var tour;
 
 	tour = new Shepherd.Tour({	
