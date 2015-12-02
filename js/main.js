@@ -32,7 +32,6 @@ myApp.config(function($stateProvider) {
 
 myApp.controller('IntroController', function($scope) {
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
-	 $(".button-collapse").sideNav();
 
 	$scope.selectUrl = 'img/select.png';
 	$scope.dropUrl = 'img/drop.png'
@@ -48,7 +47,7 @@ myApp.controller('IntroController', function($scope) {
 	  }
 	});
 
-	tour.addStep('example-step', {
+	tour.addStep('first-step', {
 		text: ["I'm a Shepherd tour guide! I can do more than just pop up on the page.  Click the next button!"],
 		attachTo: '.btn-large top',
 		classes: 'shepherd shepherd-open shepherd-theme-arrows shepherd-transparent-text',
@@ -66,7 +65,7 @@ myApp.controller('IntroController', function($scope) {
 			}
 		]
 	});
-	tour.addStep('including', {
+	tour.addStep('second-step', {
 	      title: 'YOU CAN ADD TITLES!',
 	      text: 'Click back to go back a step, or next to go to the next step!',
 	      attachTo: '#attach-one right',
@@ -82,7 +81,7 @@ myApp.controller('IntroController', function($scope) {
 	        }
 	    ]
 	});
-	tour.addStep('including', {
+	tour.addStep('third-step', {
 	      title: 'TWO',
 	      text: 'This is a number 2',
 	      attachTo: '#attach-two top',
@@ -97,7 +96,7 @@ myApp.controller('IntroController', function($scope) {
 	        }
 	    ]
 	});
-	tour.addStep('including', {
+	tour.addStep('fourth-step', {
 	      title: 'THREE',
 	      text: 'So many possibilities',
 	      attachTo: '#attach-three left',
@@ -115,7 +114,6 @@ myApp.controller('IntroController', function($scope) {
 	        }
 	    ]
 	});
-
 
 	$scope.startTour = function() {
 		$scope.canshow++;
@@ -135,13 +133,13 @@ myApp.controller('IntroController', function($scope) {
 
 
 	$scope.changeSelectBack = function() {
-		$scope.selectUrl = 'img/select.png'
+		$scope.selectUrl = './img/select.png'
 	}
 	$scope.changeDropBack = function() {
-		$scope.dropUrl = 'img/drop.png'
+		$scope.dropUrl = './img/drop.png'
 	}
 	$scope.changeTooltipBack = function() {
-		$scope.tooltipUrl = 'img/tooltip.png'
+		$scope.tooltipUrl = './img/tooltip.png'
 	}
 });
 
