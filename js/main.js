@@ -27,7 +27,6 @@ myApp.config(function($stateProvider) {
 			templateUrl: 'templates/four.html',
 			controller: 'FourController'
 		});
-
 });
 
 myApp.controller('IntroController', function($scope) {
@@ -160,6 +159,27 @@ myApp.controller('OneController', function($scope) {
 });
 
 myApp.controller('TwoController', function($scope) {
+	var tour;
+
+	tour = new Shepherd.Tour({	
+	  defaults: {
+	    classes: 'shepherd-theme-arrows',
+	  }
+	});
+	// console.log("sup");
+
+	tour.addStep('example-step', {
+		title: "Let's start creating a tour!!",
+		text: 'This would help you get started with this application!',
+		attachTo: '#redButton top'
+	});
+
+	// $(document).ready(function() {
+	// 	tour.start();
+	// });
+	$scope.startTour = function() {
+		tour.start();
+	};
 });
 
 myApp.controller('ThreeController', function($scope) {
