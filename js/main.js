@@ -1,5 +1,9 @@
 var myApp = angular.module('myApp', ['ui.router']);
 
+$(document).ready( function() {
+	$(".button-collapse").sideNav();
+});
+
 myApp.config(function($stateProvider) {
 	$stateProvider
 		.state('intro', {
