@@ -134,7 +134,7 @@ pre {
 
 /*STYLE FOR TWO.HTML
 ---------------------------------------------------------------------------*/
-#first {
+.first {
 	background-image: url(../img/logo.png);
 	background-size: cover;
   	width: 100vw;
@@ -146,45 +146,45 @@ pre {
 #zeroStep {
 	text-align: center;
 }
-#firstStep img {
+#firstStep img{
 	width: 100%;
 	padding-bottom: 5%;
 }
 #firstStep p {
 	font-size: 20px;
 }
-#secondStep img {
+#secondStep img, #thirdStep img {
 	width: 90%;
 	padding-bottom: 3%;
 }
-#thirdStep img {
+/*#thirdStep img {
 	width: 90%;
 	padding-bottom: 3%;
-}
-#fourthStep img {
+}*/
+#fourthStep img, #fifthStep img, #sixthStep img {
 	width: 100%;
 	padding-bottom: 20px;
 }
-#fifthStep img {
+/*#fifthStep img {
 	width: 100%;
 	padding-bottom: 20px;
-}
+}*/
 #fifthStep p {
 	text-align: center;
 }
 #redButton .btn-large {
 	position: absolute;
 }
-#sixthStep img {
+/*#sixthStep img {
 	width: 100%;
 	padding-bottom: 20px;
-}
+}*/
 #sixthStep p {
 	font-size: 15px;
 	padding: 0;
 	margin: 0;
 }
-#first h5 {
+.first h5 {
 	text-align: center;
 }
 #done {
@@ -199,11 +199,11 @@ pre {
 #done h5 {
 	text-decoration: none !important;
 }
-a {
+.first a {
 	color: white;
 	text-decoration: none;
 	font-style: none;
-	background-color: #0287CF !important;
+	background-color: #0287CF;
 }
 
 
@@ -231,6 +231,10 @@ a {
 
 #API ul {
 	padding-left: 5%;
+}
+
+#lastButton {
+	margin-bottom: 5%;
 }
 
 

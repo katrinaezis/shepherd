@@ -4,6 +4,9 @@
 		<div class="col-xs-6">
 			<h4>If you want to add another step..</h4>
 			<pre id="addstep" class="language-markup"><code class="language-javascript">
+&#47&#47 Let's add a step with classes
+&#47&#47 Classes change theme
+&#47&#47 Attach the step to an element
 tour.addstep('start', {
 	title: 'Adding another step with classes',
 	text: 'you can add classes to change theme',
@@ -30,6 +33,10 @@ tour.addstep('start', {
 		<div class="col-xs-6">
 			<h4>If you want to add another button..</h4>
 			<pre id="addbutton" class="language-markup"><code class="language-javascript">
+&#47&#47 Lets create another step.
+&#47&#47 Try adding 2 buttons.
+&#47&#47 make one button a primary button
+&#47&#47 and one button a secondary button
 tour.addstep('second', {
 	title: 'Lets try adding a step with 2 buttons',
 	text: 'you can simply add buttons by inserting more inside the step button method',
@@ -44,6 +51,7 @@ tour.addstep('second', {
 		},
 		{
 			text: 'Next',
+			classes: 'shepherd-button-primary',
 			action: tour.next
 		}
 	]
@@ -65,4 +73,13 @@ tour.addstep('second', {
 			</div>
 		</div>
 	</div>
+		<div id="finalbutton"class="container">
+		<a ui-sref="two">
+			<div id="done" class="card-panel light-blue darken-2">
+				<h3 class="text-center white-text">Done?</h3>
+				<h5 class="text-center white-text">Good, let's move onto harder ish</h5>
+				<!-- <a ui-sref="two" class="btn-large waves-effect waves-light white light-blue-text darken-2-text">Lesson Two</a> -->
+			</div>
+		</a>
+		</div>
 </div>
