@@ -17,6 +17,9 @@ a:hover, a:visited {
 .navbar-fixed {
 	height: 0;
 }
+footer.page-footer {
+	margin-top: 0px;
+}
 
 
 /*STYLE FOR INTRO.HTML
@@ -84,9 +87,9 @@ a:hover, a:visited {
 	text-align: center;
 }
 
-.animated {
-	height: 300px;
-	text-align: center;
+.big-button {
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 
