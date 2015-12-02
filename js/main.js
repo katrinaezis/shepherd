@@ -161,28 +161,28 @@ myApp.controller('ThreeController', function($scope) {
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 	Prism.highlightAll();
 	
-	var tour;
-	tour = new Shepherd.tour({
-		defaults: {
-			classes: 'shepherd-theme-arrows',
-			scrollTo: true
-		}
-	});
+	// var tour;
+	// tour = new Shepherd.tour({
+	// 	defaults: {
+	// 		classes: 'shepherd-theme-arrows',
+	// 		scrollTo: true
+	// 	}
+	// });
 	
-	tour.addstep 'start',
-	text: 'Lets try adding a step with 2 buttons'
-	attachTo: 'addbutton'
-	classes: 'shepherd-theme-arrows'
-	buttons: [
-		{
-			text: 'Back'
-			action: tour.back
-		}
-		{
-			text: 'Next'
-			action: tour.next
-		}
-	]
+	// tour.addstep 'start',
+	// text: 'Lets try adding a step with 2 buttons',
+	// attachTo: 'addbutton',
+	// classes: 'shepherd-theme-arrows',
+	// buttons: [
+	// 	{
+	// 		text: 'Back'
+	// 		action: tour.back
+	// 	}
+	// 	{
+	// 		text: 'Next'
+	// 		action: tour.next
+	// 	}
+	// ]
 
 });
 

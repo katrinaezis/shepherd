@@ -1,3 +1,46 @@
-<div class="container">
-	<h2>APIs and shit</h2>
+<div id="API">
+	<div id="header" class="container">
+		<h2>The API</h2>
+		<p>Shepherd provides an extensive API and documentation that explains it's behavior. Let's go through some useful calls.</p>
+	</div>
+	<div id="tourInstant" class="container">
+		<h4>Tour Instances</h4>
+		<h6>We can add options to our tour, but first we have to create the tour.</h6>
+		<pre><code>
+myTour = new Shepherd.Tour({ options });
+		</code></pre>
+		<h6>Now, we are going to look at how we can work with this instance. <code>steps</code> and <code>defaults</code> are the options of the tour instance. Its methods are as follows.</h6>
+		<ul>
+			<li><code>addStep(id, options)</code> - As we saw in our previous lessons, a step is created by assigning an ID to it, then adding options such as <code>text</code> or <code>buttons</code>, which will be described later in this lesson.</li>
+			<li><code>getById(id) - This method is used to select any particular step by its ID.</code></li>
+			<li><code>show(id)</code> - Show a particular step by ID.</li>
+			<li><code>on(event, handler)</code> - Binds an event to your tour. This is similar to jQuery's <code>bind()</code> method.</li>
+			<li><code>off(event, handler)</code> - Unbinds an event</li>
+		</ul>
+		<h6>A tour instance also has events like <code>start</code>, <code>complete</code>, <code>show</code>, and <code>hide</code>.</h6>
+	</div>
+	<div id="steps" class="container">
+		<h4>Steps</h4>
+		<h6>Let's look at the options you can add to steps. All of these have been reviewed in your lessons</h6>
+		<ul>
+			<li><code>title</code> - Add a title</li>
+			<li><code>text</code> - The text to go along with a step</li>
+			<li><code>attachTo</code> - Two parts: the selector of the element where the step is to be attached, and the position to attach the step to. We went over this in lesson two and three.</li>
+			<li><code>classes</code> - Extra classes to add to your dialog.</li>
+			<li><code>buttons</code> - The list of buttons to be shown</li>
+		</ul>
+		<h6>Methods to make your life easier</h6>
+		<ul>
+			<li><code>show()</code> - Show a step</li>
+			<li><code>hide()</code> - Hide a step</li>
+			<li><code>cancel()</code> - Hide step and cancel the tour</li>
+			<li><code>complete()</code> - Hide step and complete tour</li>
+			<li><code>destroy()</code> - Destroys a step</li>
+			<li><code>on(event, handler)</code> - Binds an event</li>
+			<li><code>off(event, handler)</code> - Unbinds an event</li>
+		</ul>
+	</div>
+	<div id="conclusion" class="text-center">
+		<h3>That's all folks!</h3>
+	</div>
 </div>
