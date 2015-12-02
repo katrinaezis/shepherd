@@ -170,11 +170,8 @@ myApp.controller('ThreeController', function($scope) {
 	// 	}
 	// });
 	
-<<<<<<< HEAD
 	// tour.addstep 'start',
-=======
 	// tour.addstep('start',
->>>>>>> 9479bb43028b6758fe2ece1dd92963fe1bce6f16
 	// text: 'Lets try adding a step with 2 buttons',
 	// attachTo: 'addbutton',
 	// classes: 'shepherd-theme-arrows',
