@@ -67,9 +67,10 @@ myApp.controller('IntroController', function($scope) {
 		]
 	});
 	tour.addStep('including', {
-	      title: 'You can add titles',
-	      text: 'Including Shepherd is easy! Just include shepherd.js, and a Shepherd theme file.',
-	      attachTo: '#thing bottom',
+	      title: 'YOU CAN ADD TITLES!',
+	      text: 'Click back to go back a step, or next to go to the next step!',
+	      attachTo: '#attach-one bottom',
+	      scrollTo: true,
 	      buttons: [
 	        {
 	          text: 'Back',
@@ -79,8 +80,40 @@ myApp.controller('IntroController', function($scope) {
 	          text: 'Next',
 	          action: tour.next
 	        }
-	      ]
-	    });
+	    ]
+	});
+	tour.addStep('including', {
+	      title: 'TWO',
+	      text: 'Click back to go back a step, or next to go to the next step!',
+	      attachTo: '#attach-two bottom',
+	      buttons: [
+	        {
+	          text: 'Back',
+	          classes: 'shepherd-button-secondary',
+	          action: tour.back
+	        }, {
+	          text: 'Next',
+	          action: tour.next
+	        }
+	    ]
+	});
+	tour.addStep('including', {
+	      title: 'THREE',
+	      text: 'Click back to go back a step, or next to go to the next step!',
+	      attachTo: '#attach-three bottom',
+	      buttons: [
+	        {
+	          text: 'Back',
+	          classes: 'shepherd-button-secondary',
+	          action: tour.back
+	        }, {
+	          text: 'Next',
+	          action: tour.next
+	        }
+	    ]
+	});
+
+
 
 	$scope.startTour = function() {
 		$scope.canshow++;

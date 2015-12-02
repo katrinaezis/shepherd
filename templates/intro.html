@@ -55,7 +55,7 @@
 	<div>
 		<h2 class="what-shep-title">Really briefly: What is Tether?</h2>
 		<h4>A JavaScript Library that simplifies making absolutely positioned elements stay next to other elements on the page.</h4>
-		<!-- The element to be moved is called the 'element'. The element in the page it's to be attached to is called the 'target'. -->
+		<!-- The element to be moved is called the 'element' (the yellow one). The element in the page it's to be attached to is called the 'target' (the green one). And the "A" is the point of attatchment -->
 		<img id="tether-screenshot" src="img/tether-screenshot.png">
 		<h4 class="text-center">Other JavaScript Libraries that use Tether</h4>
 	</div>
@@ -86,16 +86,15 @@
 	<a class="waves-light btn-large light-blue darken-2" ng-click="startTour()">Take a Look</a>
 </div>
 
-<div class="separate animated fadeInDown" ng-show="canshow > 0">
-	<h1 id="thing">Look at all of these objects!!!</h1>
+<div class="separate animated fadeInDown"> <!--ng-show="canshow > 0"-->
 	<div class="row">
-		<div class="col-md-4">
-			<h1>1</h1>
+		<div class="numbers col-md-4">
+			<h1 id="attach-one">1</h1>
 		</div>
-		<div class="col-md-4">
+		<div id="attach-two" class="numbers col-md-4">
 			<h1>2</h1>
 		</div>
-		<div class="col-md-4">
+		<div id="attach-three" class="numbers col-md-4">
 			<h1>3</h1>
 		</div>
 	<div>
