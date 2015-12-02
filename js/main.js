@@ -150,7 +150,7 @@ myApp.controller('OneController', function($scope) {
 		Prism.highlightAll();
 	// });
 	// $rootScope.$on('$stateChangeSuccess', function() {
-	//    document.body.scrollTop = document.documentElement.scrollTop = 0;
+	  // document.body.scrollTop = document.documentElement.scrollTop = 0;
 	// });
 });
 
@@ -188,6 +188,7 @@ myApp.controller('ThreeController', function($scope) {
 });
 
 myApp.controller('FourController', function($scope) {
+	document.body.scrollTop = document.documentElement.scrollTop = 0;
 });
 
 
