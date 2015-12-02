@@ -219,7 +219,26 @@ myApp.controller('ThreeController', function($scope) {
 			},
 			{
 				text: 'Next',
+				classes: 'shepherd-button-primary',
 				action: tour.next
+			}
+		]
+	});
+	tour.addStep('last', {
+		title: 'Lets go to lesson 4',
+		text: '',
+		attachTo: '#finalbutton top',
+		classes: 'shepherd-theme-arrows',
+		scrollTo: true,
+		buttons: [
+			{
+				text: 'Back',
+				classes: 'shepherd-button-secondary',
+				action: tour.back
+			},
+			{
+				text: 'Complete',
+				action: tour.complete
 			}
 		]
 	});
