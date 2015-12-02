@@ -1,1 +1,42 @@
 <!-- Adding buttons. Classes. Adding more steps. James -->
+<div id="gettingStarted" autoscroll="true">
+<h3>If you want to add another step..</h3>
+	<pre id="addstep" class="language-markup"><code class="language-javascript">
+tour.addstep 'lovely step',
+	text: 'This step is attached to tour.'
+	attachTo: '.example-css-selector bottom'
+	classes: 'example-step-extra-class'
+	buttons: [
+		text: 'Next'
+		action: tour.next
+	]
+
+	</code></pre>
+	<ul>
+		<li><code>attachTo</code>: What element the step should be attached to on the page.  It can either be a string of the form <code>"element on"</code>, or an object with those properties.  For example: <code>".some #element left"</code>, or <code>{element: '.some #element', on: 'left'}</code>.  If you use the object syntax, <code>element</code> can also be a DOM element.  If you don't specify an <code>attachTo</code> the element will appear in the middle of the screen.</li>
+		<li><code>classes</code>: Extra classes to add to the step.  <code>shepherd-theme-arrows</code> will give you our theme.</li>
+	</ul>
+<h3>If you want to add another button..</h3>
+	<pre id="addbutton" class="language-markup"><code class="language-javascript">
+tour.addstep 'another lovely step',
+	text: 'This step is attached to tour.'
+	attachTo: '.example-css-selector bottom'
+	classes: 'example-step-extra-class'
+	buttons: [
+		{
+			text: 'Back'
+			action: tour.back
+		}
+		{
+			text: 'Next'
+			action: tour.next
+		}
+	]
+
+	</code></pre>
+<img src = "../img/addStep.jpg">
+
+<p>addStep(id, options): Creates a new Step object with options, and returns the Tour object for convenient chaining when creating multiple steps. 
+If you'd like you can also just pass an options hash which includes id as a key. If the options hash doesn't include an id, one will be generated.
+You can also pass an existing Step instance rather than options, but note that Shepherd does not support a Step being attached to multiple Tours.</p>
+</div>
