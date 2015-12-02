@@ -147,7 +147,16 @@ pre {
 
 /*STYLE FOR THREE.HTML
 ---------------------------------------------------------------------------*/
-
+#begin {
+	padding-top: 5%;
+	font-size: 18px;
+}
+#begin h4{
+	color: #0288d1;
+}
+#explanation{
+	padding: 5%;
+}
 /*STYLE FOR FOUR.HTML
 ---------------------------------------------------------------------------*/
 #API div {

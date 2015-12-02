@@ -1,42 +1,68 @@
 <!-- Adding buttons. Classes. Adding more steps. James -->
-<div id="gettingStarted" autoscroll="true">
-<h3>If you want to add another step..</h3>
-	<pre id="addstep" class="language-markup"><code class="language-javascript">
-tour.addstep 'lovely step',
-	text: 'This step is attached to tour.'
-	attachTo: '.example-css-selector bottom'
-	classes: 'example-step-extra-class'
-	buttons: [
-		text: 'Next'
-		action: tour.next
-	]
-
-	</code></pre>
-	<ul>
-		<li><code>attachTo</code>: What element the step should be attached to on the page.  It can either be a string of the form <code>"element on"</code>, or an object with those properties.  For example: <code>".some #element left"</code>, or <code>{element: '.some #element', on: 'left'}</code>.  If you use the object syntax, <code>element</code> can also be a DOM element.  If you don't specify an <code>attachTo</code> the element will appear in the middle of the screen.</li>
-		<li><code>classes</code>: Extra classes to add to the step.  <code>shepherd-theme-arrows</code> will give you our theme.</li>
-	</ul>
-<h3>If you want to add another button..</h3>
-	<pre id="addbutton" class="language-markup"><code class="language-javascript">
-tour.addstep 'another lovely step',
-	text: 'This step is attached to tour.'
-	attachTo: '.example-css-selector bottom'
-	classes: 'example-step-extra-class'
+<div id="begin" class ="container-fluid">
+	<div class="row">
+		<div class="col-xs-6">
+			<h4>If you want to add another step..</h4>
+			<pre id="addstep" class="language-markup"><code class="language-javascript">
+tour.addstep('start', {
+	title: 'Adding another step with classes',
+	text: 'you can add classes to change theme',
+	attachTo: 'element right',
+	classes: 'shepherd-theme-arrows',
 	buttons: [
 		{
-			text: 'Back'
-			action: tour.back
-		}
-		{
-			text: 'Next'
+			text: 'Next',
 			action: tour.next
 		}
 	]
-
-	</code></pre>
-<img src = "../img/addStep.jpg">
-
-<p>addStep(id, options): Creates a new Step object with options, and returns the Tour object for convenient chaining when creating multiple steps. 
-If you'd like you can also just pass an options hash which includes id as a key. If the options hash doesn't include an id, one will be generated.
-You can also pass an existing Step instance rather than options, but note that Shepherd does not support a Step being attached to multiple Tours.</p>
+});
+			</code></pre>
+		</div>
+		<div class="col-xs-6">
+			<div id="explanation" class="container-fluid">
+			<li><code>attachTo</code>: What element the step should be attached to on the page. For example: <code>".some #element left"</code>.  If you don't specify an <code>attachTo</code> the element will appear in the middle of the screen.</li>
+			<a></a>
+			<li><code>classes</code>: Extra classes to add to the step.  <code>shepherd-theme-arrows</code> will give you our theme.</li>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">
+			<h4>If you want to add another button..</h4>
+			<pre id="addbutton" class="language-markup"><code class="language-javascript">
+tour.addstep('second', {
+	title: 'Lets try adding a step with 2 buttons',
+	text: 'you can simply add buttons by inserting more inside the step button method',
+	attachTo: 'element bottom',
+	classes: 'shepherd-theme-arrows',
+	scrollTo: true
+	buttons: [
+		{
+			text: 'Back',
+			classes: 'shepherd-button-secondary',
+			action: tour.back
+		},
+		{
+			text: 'Next',
+			action: tour.next
+		}
+	]
+});
+			</code></pre>
+		</div>
+		<div class="col-xs-6">
+			<div id="explanation" class="container-fluid">
+			<li><code>buttons</code>: An array of buttons to add to the step.  By default we add a Next button which triggers <code>next()</code>, set this to false
+			to disable.  Each button in the array is an object of the format:<ol>
+			<li><code>text</code>: The HTML text of the button</li>
+			<li><code>classes</code>: Extra classes to apply to the <code>&lt;a&gt;</code></li>
+			<li><code>action</code>: A function executed when the button is clicked on</li>
+			<li><code>events</code>: A hash of events to bind onto the button, for example <code>{'mouseover': function(){}}</code>.  Adding a click event to <code>events</code> when you
+			already have an <code>action</code> specified is not supported.</li>
+			</ol>
+			</li>
+			<li><code>scrollTo</code>: Should the element be scrolled to when this step is shown?</li>
+			</div>
+		</div>
+	</div>
 </div>

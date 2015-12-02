@@ -37,6 +37,7 @@ myApp.controller('IntroController', function($scope) {
 	$scope.dropUrl = 'img/drop.png'
 	$scope.tooltipUrl = 'img/tooltip.png'
 	$scope.canshow = 0;
+	$scope.nextPage = 0;
 	var tour;
 
 	tour = new Shepherd.Tour({	
@@ -69,7 +70,7 @@ myApp.controller('IntroController', function($scope) {
 	      title: 'YOU CAN ADD TITLES!',
 	      text: 'Click back to go back a step, or next to go to the next step!',
 	      attachTo: '#attach-one right',
-	      scrollTo: true,	
+	      // scrollTo: true,	
 	      buttons: [
 	        {
 	          text: 'Back',
@@ -120,6 +121,10 @@ myApp.controller('IntroController', function($scope) {
 		tour.start();
 	};
 
+	$scope.countUp = function() {
+		$scope.nextPage++;
+	}
+
 	$scope.changeSelectGif = function() {
 		$scope.selectUrl = "./img/select.gif";
 		console.log('hello')
@@ -161,29 +166,44 @@ myApp.controller('ThreeController', function($scope) {
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 	Prism.highlightAll();
 	
-	// var tour;
-	// tour = new Shepherd.tour({
-	// 	defaults: {
-	// 		classes: 'shepherd-theme-arrows',
-	// 		scrollTo: true
-	// 	}
-	// });
-	
-	// tour.addstep 'start',
-	// tour.addstep('start',
-	// text: 'Lets try adding a step with 2 buttons',
-	// attachTo: 'addbutton',
-	// classes: 'shepherd-theme-arrows',
-	// buttons: [
-	// 	{
-	// 		text: 'Back'
-	// 		action: tour.back
-	// 	}
-	// 	{
-	// 		text: 'Next'
-	// 		action: tour.next
-	// 	}
-	// ]
+	var tour;
+	tour = new Shepherd.Tour({
+		defaults: {
+			classes: 'shepherd-element shepherd-open shepherd-theme-arrows',
+			showCancelLink: true
+		}
+	});
+	tour.addStep('start', {
+		title: 'Adding another step with classes',
+		text: 'you can add classes to change theme',
+		attachTo: '#addstep right',
+		classes: 'shepherd-theme-arrows',
+		buttons: [
+			{
+				text: 'Next',
+				action: tour.next
+			}
+		]
+	});
+	tour.addStep('second', {
+		title: 'Lets try adding a step with 2 buttons',
+		text: 'you can simply add buttons by inserting more inside the step button method',
+		attachTo: '#addbutton bottom',
+		classes: 'shepherd-theme-arrows',
+		scrollTo: true,
+		buttons: [
+			{
+				text: 'Back',
+				classes: 'shepherd-button-secondary',
+				action: tour.back
+			},
+			{
+				text: 'Next',
+				action: tour.next
+			}
+		]
+	});
+	tour.start();
 
 });
 
