@@ -37,7 +37,6 @@ myApp.controller('IntroController', function($scope) {
 	$scope.dropUrl = 'img/drop.png'
 	$scope.tooltipUrl = 'img/tooltip.png'
 	$scope.canshow = 0;
-	console.log($scope.canshow)
 	var tour;
 
 	tour = new Shepherd.Tour({	
@@ -69,8 +68,8 @@ myApp.controller('IntroController', function($scope) {
 	tour.addStep('including', {
 	      title: 'YOU CAN ADD TITLES!',
 	      text: 'Click back to go back a step, or next to go to the next step!',
-	      attachTo: '#attach-one bottom',
-	      scrollTo: true,
+	      attachTo: '#attach-one right',
+	      scrollTo: true,	
 	      buttons: [
 	        {
 	          text: 'Back',
@@ -84,8 +83,8 @@ myApp.controller('IntroController', function($scope) {
 	});
 	tour.addStep('including', {
 	      title: 'TWO',
-	      text: 'Click back to go back a step, or next to go to the next step!',
-	      attachTo: '#attach-two bottom',
+	      text: 'This is a number 2',
+	      attachTo: '#attach-two top',
 	      buttons: [
 	        {
 	          text: 'Back',
@@ -99,20 +98,22 @@ myApp.controller('IntroController', function($scope) {
 	});
 	tour.addStep('including', {
 	      title: 'THREE',
-	      text: 'Click back to go back a step, or next to go to the next step!',
-	      attachTo: '#attach-three bottom',
+	      text: 'So many possibilities',
+	      attachTo: '#attach-three left',
 	      buttons: [
 	        {
 	          text: 'Back',
 	          classes: 'shepherd-button-secondary',
 	          action: tour.back
 	        }, {
-	          text: 'Next',
-	          action: tour.next
+	          text: 'Exit',
+				classes: 'shepherd-button-primary',
+				action: function() {
+					return tour.hide();
+				}
 	        }
 	    ]
 	});
-
 
 
 	$scope.startTour = function() {
@@ -169,7 +170,11 @@ myApp.controller('ThreeController', function($scope) {
 	// 	}
 	// });
 	
+<<<<<<< HEAD
 	// tour.addstep 'start',
+=======
+	// tour.addstep('start',
+>>>>>>> 9479bb43028b6758fe2ece1dd92963fe1bce6f16
 	// text: 'Lets try adding a step with 2 buttons',
 	// attachTo: 'addbutton',
 	// classes: 'shepherd-theme-arrows',
