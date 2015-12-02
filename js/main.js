@@ -32,6 +32,7 @@ myApp.config(function($stateProvider) {
 
 myApp.controller('IntroController', function($scope) {
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
+	 $(".button-collapse").sideNav();
 
 	$scope.selectUrl = 'img/select.png';
 	$scope.dropUrl = 'img/drop.png'
