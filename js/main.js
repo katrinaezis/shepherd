@@ -214,7 +214,7 @@ myApp.controller('ThreeController', function($scope) {
 	tour.addStep('second', {
 		title: 'Lets try adding a step with 2 buttons',
 		text: 'you can simply add buttons by inserting more inside the step button method',
-		attachTo: '#addbutton bottom',
+		attachTo: '#addbutton right',
 		classes: 'shepherd-theme-arrows',
 		scrollTo: true,
 		buttons: [
