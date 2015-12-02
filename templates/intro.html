@@ -2,7 +2,7 @@
 	Live demo of little tool tips.
 	Julian -->
 <div id="header" class="container">
-	<h2>Today we're going to teach you about Shepherd</h2>
+	<h2 id="firsttext">Today we're going to teach you about Shepherd</h2>
 	<h3>But first...</h3>
 </div>
 
@@ -35,9 +35,8 @@
 	<h3>Alright, now that we've gotten that stuff out of the way, let's get to Shepherd.</h3>
 </div>
 
-<div class="separate light-blue lighten-1">
-	<!-- I'd reccomend maybe trying light-blue accent-3 or accent-4 here if you want to use a different blue -->
-	<h2 class="text-center what-shep-title">What is Shepherd?</h2>
+<div class="separate light-blue accent-3">
+	<h2 class="what-shep-title">What is Shepherd?</h2>
 	<div class="col-md-4 what-shep">
 		<img class="shep-icon" src="img/javascript.png">
 		<h4>JavaScript Library</h4>
@@ -52,10 +51,11 @@
 	</div>
 </div>
 
-<div class="container">
-	<h2 class="text-center">But what does it look like?</h2>
+<div class="container separate">
+	<h2 class="what-shep-title">But what does it look like?</h2>
 	<a class="waves-light btn-large light-blue darken-2" ng-click="startTour()">Take a Look</a>
 </div>
-<div class="light-blue lighten-1 separate" ng-show="canshow > 0" ng-animate="{show: 'show-animation', hide: 'hide-animation'}">
+<div class="light-blue accent-3 separate" ng-show="canshow > 0" ng-animate="{show: 'show-animation', hide: 'hide-animation'}">
 	<h1 id="thing">Look at all of these objects!!!</h1>
 </div>
+

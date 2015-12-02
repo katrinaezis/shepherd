@@ -1,12 +1,29 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway|Josefin+Sans);
-
+/*STYLE FOR INDEX.HTML
+---------------------------------------------------------------------------*/
 #navLogo {
-	max-height: 40px;
+	max-height: 50px;
 	margin-left: 5%;
 }
 
 html {
     font-family: 'Raleway', sans-serif !important;
+}
+
+a:hover, a:visited {
+	text-decoration: none !important;
+}
+
+.navbar-fixed {
+	height: 0;
+}
+
+
+/*STYLE FOR INTRO.HTML
+---------------------------------------------------------------------------*/
+
+#firsttext {
+	margin-top: 80px;
 }
 
 #aboutUs {
@@ -24,9 +41,43 @@ html {
 	text-align: center;
 }
 
-a:hover, a:visited {
-	text-decoration: none !important;
+.separate {
+	height: 400px;
+	width: 100%;
 }
+.separate-thin {
+	height: 30px;
+	width:100%;
+}
+
+.shep-icon {
+	height: 5em;
+}
+
+.what-shep-title {
+	padding-top: 90px;
+	text-align: center;
+}
+.what-shep {
+	text-align: center;
+}
+
+.btn-large {
+	position: relative;
+	margin-top: 40px;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+
+/*angular animations
+https://code.angularjs.org/1.1.5/docs/api/ng.directive:ngShow#animations
+http://www.yearofmoo.com/2013/04/animation-in-angularjs.html#animating-ng-show-ng-hide*/
+
+
+
+
+/*STYLE FOR ONE.HTML
+---------------------------------------------------------------------------*/
 
 #done {
 	border-radius: 10px;
@@ -47,10 +98,6 @@ a:hover, a:visited {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	height: 100vh;
-}
-
-.navbar-fixed {
-	height: 0;
 }
 
 #lesson {
@@ -76,35 +123,3 @@ pre {
 	display: block;
 	margin: auto;
 }
-
-.separate {
-	height: 400px;
-	width: 100%;
-}
-.separate-thin {
-	height: 30px;
-	width:100%;
-}
-
-.shep-icon {
-	height: 5em;
-}
-
-.what-shep-title {
-	padding-top: 90px;
-}
-.what-shep {
-	text-align: center;
-}
-
-.btn-large {
-	position: relative;
-	margin-top: 40px;
-	left:50%;
-	transform: translate(-50%, -50%);
-}
-
-/*angular animations
-https://code.angularjs.org/1.1.5/docs/api/ng.directive:ngShow#animations
-http://www.yearofmoo.com/2013/04/animation-in-angularjs.html#animating-ng-show-ng-hide*/
-
